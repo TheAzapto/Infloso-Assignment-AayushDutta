@@ -1,5 +1,7 @@
 import '../styles/LoginPage.css';
 import React, { useState } from 'react';
+import Splash from '../components/Splash';
+
 
 export default function Login() {
     const [username, setUsername] = useState('');
@@ -22,11 +24,8 @@ export default function Login() {
     return (
         <>
         <div className="background">
-
-        <div className="splash">
-
-        </div>
-        <div className="login-container">
+            <Splash/>
+            <div className="login-container">
             <form onSubmit={handleSubmit}>
             <h1>SIGN IN</h1>
 
