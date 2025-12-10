@@ -1,4 +1,4 @@
 body {
     background-image: url('../public/images/bgimage.webp');
-    background-size: cover;
+    background-size: fill;
 }

@@ -4,6 +4,8 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import authRoutes from "./routes/authRoutes.js";
 import cookieParser from "cookie-parser";
+import jwt from "jsonwebtoken";
+import User from "./models/User.js";
 
 dotenv.config();
 const app = express();
@@ -21,12 +23,36 @@ app.use(cookieParser());
 
 app.use(
     cors({
-        origin: "http://localhost:5173",
+        origin: "http://localhost:3000",
         credentials: true,
     })
 );
 
 app.use("/api", authRoutes);
+
+app.get("/auth/verify", async (req, res) => {
+    const token = req.cookies.token;
+
+    if (!token) {
+        return res.status(200).json({ error: "No token found", authenticated: false });
+    }
+
+    try {
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
+        const user = await User.findById(decoded.userId);
+
+        return res.status(200).json({
+            authenticated: true,
+            user,
+        });
+
+
+    } catch (err) {
+        return res.status(200).json({ error: err.message, authenticated: false });
+    }
+});
+
 
 app.listen(PORT, () => {
     console.log(`Server started on port ${PORT}`);
