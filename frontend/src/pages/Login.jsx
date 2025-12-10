@@ -1,6 +1,7 @@
 import '../styles/LoginPage.css';
 import React, { useState } from 'react';
 import Splash from '../components/Splash';
+import { Link } from 'react-router-dom';
 
 
 export default function Login() {
@@ -33,6 +34,7 @@ export default function Login() {
                 <input type="text" placeholder="Username or Email" onChange={(e) => setUsername(e.target.value)}/>
                 <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)}/>
                 <button type="submit">Login</button>
+                <p>Don't have an account? <Link to="/signup" style={{textDecoration: "none", color: "var(--accent-color)"}}>Sign up</Link></p>
             </form>
 
         </div>

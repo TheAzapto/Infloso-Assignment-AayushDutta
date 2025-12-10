@@ -1,0 +1,48 @@
+.wrapper {
+    display: flex;
+    background-color: #1c1c1c44;
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    flex-grow: 1;
+}
+
+.wrapper h1 {
+    font-size: 7rem;
+    margin-bottom: 0px;
+}
+#music {
+    color: var(--accent-color);
+    font-family: 'Rock Salt', cursive;
+}
+
+#verse {
+    color: var(--secondary-color);
+    font-family: 'Kite One', sans-serif;
+    font-size: 120%;
+}
+
+#tagline {
+    margin: 0 0 5rem 0;
+    color: var(--secondary-color);
+    font-size:2rem;
+    font-weight: bold;
+}
+
+.wrapper button {
+    padding: 1rem 2rem;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    font-weight: bold;
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover {
+        background-color: var(--primary-color);
+        backdrop-filter: blur(10px);
+        color: var(--accent-color);
+        border: 1px solid var(--accent-color);
+    }
+}

@@ -1,0 +1,92 @@
+.background {
+    display: flex;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-grow: 1;
+}
+
+.splash {
+    padding: 2vw;
+    flex-grow: 1;
+    font-size: 3rem;
+    
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    mix-blend-mode: difference;
+}
+
+.splash .holder {
+    display: flex;
+    flex-direction: column;
+}   
+
+.splash .holder * {
+    margin: 0px;
+    padding: 0px;
+}
+
+#music {
+    color: var(--accent-color);
+    font-family: 'Rock Salt', cursive;
+}
+
+#verse {
+    color: var(--secondary-color);
+    font-family: 'Kite One', sans-serif;
+    font-size: 120%;
+}
+
+.splash .holder p {
+    color: var(--accent-color);
+}
+
+.login-container form {
+    padding: 2rem;
+    color: var(--accent-color);
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: center;
+    height: 80vh;
+    width: 80%;
+    border-radius: 10px;
+    background-color: #0a0a0a88;
+    backdrop-filter: blur(10px);
+}
+
+.login-container form input {
+    color: var(--accent-color);
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    background-color: var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+.login-container form button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    color: var(--secondary-color);
+    cursor: pointer;
+    &:hover {
+        background-color: transparent;
+        color: var(--accent-color);
+        border: 1px solid var(--accent-color);
+    }   
+}
+
+.login-container form p {
+    color: var(--secondary-color);
+    font-size: 0.75rem;
+}
