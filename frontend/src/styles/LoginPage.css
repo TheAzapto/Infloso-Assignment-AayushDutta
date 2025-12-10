@@ -1,0 +1,66 @@
+.background {
+    width: 100%;
+    display: flex;
+    background-image: url('https://i.ibb.co/jZHfP2T9/hehe.jpg');
+    background-size: cover;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-grow: 1;
+}
+
+.splash {
+    height: 100vh;
+    flex-grow: 2;
+}
+
+.login-container form {
+    padding: 2rem;
+    color: rgb(174, 0, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: center;
+    height: 80vh;
+    width: 80%;
+    border-radius: 10px;
+    background-color: #0a0a0a88;
+    backdrop-filter: blur(10px);
+}
+
+.login-container form input {
+    color: white;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #1f1f1f;
+    border-bottom: 1px solid #111;
+    border-radius: 5px;
+}
+
+.login-container form button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(174, 0, 255);
+    border: 1px solid rgb(174, 0, 255);
+    color: white;
+    cursor: pointer;
+    &:hover {
+        background-color: transparent;
+        color: rgb(174, 0, 255);
+        border: 1px solid rgb(174, 0, 255);
+    }   
+}
+
+.login-container form p {
+    color: white;
+    font-size: 0.75rem;
+}
+
+
